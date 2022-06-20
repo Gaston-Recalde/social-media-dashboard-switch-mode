@@ -190,6 +190,61 @@ body{
     border-top: 5px solid var(--youTube)
 }
 
+.data__h3{
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.data__card{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    background-color: var(--dark-desaturated-blue);
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    max-width: 335px;
+}
+
+.card__social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.social__p{
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card__numero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.numero__h3{
+    font-size: 28px;
+}
+
+.numero__div{
+    display: flex;
+    align-items: center;
+}
+
+.div__p{
+    color: var(--lime-green);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.div__p-f{
+    color: var(--bright-red);
+}
+
 
 
 
