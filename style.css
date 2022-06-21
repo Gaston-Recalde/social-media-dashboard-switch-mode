@@ -61,12 +61,11 @@ body{
     color: var(--white);
     max-width: 1280px;
     margin: 0 auto;
-    transition: .3s ease all;
+    transition: .5s ease all;
 }
 
 body.light{
     background-color: var(--white);
-    transition: .3s ease all;
 }
 
 .header{
@@ -136,7 +135,6 @@ body.light .titulo__h3{
     border-radius: 50%;
     margin-left: 3px;
     margin-top: 2.5px;
-    transition: .3s ease all;
 }
 
 .active::after{
@@ -174,12 +172,16 @@ body.light .switch{
 }
 
 body.light .social__card{
-    background-color: var(--light-grayish-blue);
+    background-color: var(--very-pale-blue);
 }
 
 .social__card:hover{
     cursor: pointer;
-    /* background-color: var(); */
+    background-color: var(--dark-grayish-blue);
+}
+
+body.light .social__card:hover{
+    background-color: var(--dark-grayish-blue);
 }
 
 .card__info{
@@ -248,7 +250,7 @@ body.light .numbers__h5{
 }
 
 .social__card-instagram{
-    border-top: 5px solid red; /*CAMBIAR*/
+    border-top: 5px solid rgb(212, 13, 13);
 }
 
 .social__card-youtube{
@@ -276,21 +278,24 @@ body.light .data__h3{
 .data__card{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: space-between; */
     background-color: var(--dark-desaturated-blue);
     padding: 30px;
     border-radius: 5px;
     margin-bottom: 25px;
-    width: 335px;
+    width: 291px;
 }
 
 body.light .data__card{
-    background-color: var(--light-grayish-blue);
+    background-color: var(--very-pale-blue);
 }
 
 .data__card:hover{
     cursor: pointer;
+    background-color: var(--dark-grayish-blue);
+}
+
+body.light .data__card:hover{
+    background-color: var(--light-grayish-blue);
 }
 
 .card__social{
@@ -333,12 +338,14 @@ body.light .numero__h3{
     color: var(--lime-green);
     font-weight: 700;
     font-size: 12px;
+    margin-left: 5px;
 }
 
 .div__p-f{
     color: var(--bright-red);
     font-weight: 700;
     font-size: 12px;
+    margin-left: 5px;
 }
 
 @media screen and (min-width: 1024px){
@@ -360,21 +367,6 @@ body.light .numero__h3{
     .header__mode{
         width: 150px;
     }
-
-    /* .main__social{
-        display: flex;
-        gap: 25px;
-    }
-
-    .main__data{
-        display: flex;
-        gap: 25px;
-        flex-wrap: wrap;
-    } */
-
-    .data__card{
-        width: 291px;
-    }
 }
 
 
@@ -382,5 +374,5 @@ body.light .numero__h3{
 
 
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; margin-bottom: 25px; }
 .attribution a { color: hsl(228, 45%, 44%); }
