@@ -59,29 +59,14 @@ body{
     font-size: var(--font-size);
     background-color: var(--very-dark-blue);
     color: var(--white);
-    /* margin: 0 20px;
-    margin-top: 40px; */
     max-width: 1280px;
     margin: 0 auto;
 }
 
-/* body.dark(asi es como se escribe), cambiar el color para light 
-    Agregar transition: .3s ease all; para que los cambios
-    demoren .3s antes de realizarlos
-*/
-
-/* 
-    Modificar los colores a mano de cada uno,
-    agregar el .dark('Light'),
-    para que cambie los colores al hacer click en el modo light
-
-    Se coloca
-    body.dark('Light') data__card
-    body.dark('Light') main__data
-    body.dark('Light') social__card
-    etc, etc, etc
-
-*/
+body.light{
+    background-color: var(--white);
+    transition: .3s ease all;
+}
 
 .header{
     margin: 0 20px;
@@ -104,6 +89,10 @@ body{
     margin-bottom: 7px;
 }
 
+body.light .titulo__h3{
+    color: var(--very-dark-blue);
+}
+
 .titulo__span{
     font-weight: 700;
     color: var(--desaturated-blue);
@@ -122,49 +111,42 @@ body{
     font-weight: 700;
 }
 
-.mode__a{
+.switch{
     width: 50px;
     height: 25px;
     background-image: var(--toggle-mode);
     border-radius: 50px;
-}
-
-/*  .switch
-    background
-    border-radius
     border: none;
     position: relative;
     cursor: pointer;
     outline: none;
-*/
+}
 
-/*  Usar un ::after para colocar la bolita dentro del boton y poder hacer el switch 
+.switch::after{
     content: "";
     display: block;
-    width y height
-    position: absolute;
-    background
-    top; 0;
-    left: 0;
-    right: unset;
-    border-radius
-    transition: .3s ease all;
-*/
-
-/* usar .active para mover la bolta
-    ::after{
-        right:0;
-        left: unset;
-    }
-*/
-
-.p{
     width: 20px;
     height: 20px;
+    position: absolute;
     background-color: var(--dark-desaturated-blue);
+    top: 0;
+    left: 0;
+    right: unset;
     border-radius: 50%;
     margin-left: 3px;
     margin-top: 2.5px;
+    transition: .3s ease all;
+}
+
+.active::after{
+    right: 0;
+    left: unset;
+    margin-right: 3px;
+    background-color: var(--white);
+}
+
+body.light .switch{
+    background-image: var(--toggle);
 }
 
 .main__social{
@@ -182,9 +164,13 @@ body{
     width: 335px;
 }
 
+body.light .social__card{
+    background-color: var(--light-grayish-blue);
+}
+
 .social__card:hover{
     cursor: pointer;
-    background-color: var();
+    /* background-color: var(); */
 }
 
 .card__info{
@@ -214,6 +200,10 @@ body{
     font-size: 56px;
 }
 
+body.light .numbers__h5{
+    color: var(--very-dark-blue);
+}
+
 .numbers__follow{
     color: var(--desaturated-blue);
     letter-spacing: 5px;
@@ -236,6 +226,8 @@ body{
 
 .today__info-f{
     color: var(--bright-red);
+    font-weight: 700;
+    font-size: 12px;
 }
 
 .social__card-facebook{
@@ -260,12 +252,12 @@ body{
     margin-bottom: 25px;
 }
 
+body.light .data__h3{
+    color: var(--dark-grayish-blue);
+}
+
 .main__data{
     margin: 0 20px;
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 25px; */
 }
 
 .data__card{
@@ -278,6 +270,10 @@ body{
     border-radius: 5px;
     margin-bottom: 25px;
     width: 335px;
+}
+
+body.light .data__card{
+    background-color: var(--light-grayish-blue);
 }
 
 .data__card:hover{
@@ -297,6 +293,10 @@ body{
     letter-spacing: 1px;
 }
 
+body.light .social__p{
+    color: var(--dark-grayish-blue);
+}
+
 .card__numero{
     display: flex;
     justify-content: space-between;
@@ -305,6 +305,10 @@ body{
 
 .numero__h3{
     font-size: 28px;
+}
+
+body.light .numero__h3{
+    color: var(--very-dark-blue);
 }
 
 .numero__div{
@@ -320,6 +324,8 @@ body{
 
 .div__p-f{
     color: var(--bright-red);
+    font-weight: 700;
+    font-size: 12px;
 }
 
 @media screen and (min-width: 1024px){
