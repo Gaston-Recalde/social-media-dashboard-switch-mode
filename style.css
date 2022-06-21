@@ -65,6 +65,24 @@ body{
     margin: 0 auto;
 }
 
+/* body.dark(asi es como se escribe), cambiar el color para light 
+    Agregar transition: .3s ease all; para que los cambios
+    demoren .3s antes de realizarlos
+*/
+
+/* 
+    Modificar los colores a mano de cada uno,
+    agregar el .dark('Light'),
+    para que cambie los colores al hacer click en el modo light
+
+    Se coloca
+    body.dark('Light') data__card
+    body.dark('Light') main__data
+    body.dark('Light') social__card
+    etc, etc, etc
+
+*/
+
 .header{
     margin: 0 20px;
     margin-bottom: 20px;
@@ -111,6 +129,35 @@ body{
     border-radius: 50px;
 }
 
+/*  .switch
+    background
+    border-radius
+    border: none;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+*/
+
+/*  Usar un ::after para colocar la bolita dentro del boton y poder hacer el switch 
+    content: "";
+    display: block;
+    width y height
+    position: absolute;
+    background
+    top; 0;
+    left: 0;
+    right: unset;
+    border-radius
+    transition: .3s ease all;
+*/
+
+/* usar .active para mover la bolta
+    ::after{
+        right:0;
+        left: unset;
+    }
+*/
+
 .p{
     width: 20px;
     height: 20px;
@@ -133,6 +180,11 @@ body{
     border-radius: 5px;
     margin-bottom: 30px;
     width: 335px;
+}
+
+.social__card:hover{
+    cursor: pointer;
+    background-color: var();
 }
 
 .card__info{
@@ -226,6 +278,10 @@ body{
     border-radius: 5px;
     margin-bottom: 25px;
     width: 335px;
+}
+
+.data__card:hover{
+    cursor: pointer;
 }
 
 .card__social{
