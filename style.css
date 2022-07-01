@@ -181,7 +181,7 @@ body.light .social__card{
 }
 
 body.light .social__card:hover{
-    background-color: var(--dark-grayish-blue);
+    background-color: var(--light-grayish-blue);
 }
 
 .card__info{
