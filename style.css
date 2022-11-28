@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 :root{
@@ -374,5 +375,5 @@ body.light .numero__h3{
 
 
 
-.attribution { font-size: 11px; text-align: center; margin-bottom: 25px; }
+.attribution { font-size: 11px; text-align: center; margin-bottom: 25px; color: black; }
 .attribution a { color: hsl(228, 45%, 44%); }
